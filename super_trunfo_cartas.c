@@ -1,16 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-// Função para limpar o buffer de entrada (permanece a mesma, é robusta)
-void limpar_buffer() {
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
-}
-
-int main(int argc, char const *argv[])
+int main()
 {
-    (void)argc;
-    (void)argv;
     
     // Variáveis para armazenar os dados das cartas e nome do jogador.
 
@@ -53,11 +45,11 @@ int main(int argc, char const *argv[])
     printf("Digite o codigo da carta de acordo com o numero do seu estado escolhido. EX: GO01.\n");
     printf("Digite o codigo da carta: ");
     scanf("%9s", codigo);
-    limpar_buffer();
+    
 
     // Cidade.
-    printf("Agora vamos cadastrar a cidade de acordo com o estado que você escoheu.\n");
-    printf("Nome da cidade (Ate 79 carácteres): ");
+    printf("Agora vamos cadastrar a cidade de acordo com o estado que voce escoheu.\n");
+    printf("Nome da cidade (Ate 79 caracteres): ");
     fgets(cidade, sizeof(cidade), stdin);
     cidade[strcspn(cidade, "\n")] = 0;
     
@@ -65,25 +57,25 @@ int main(int argc, char const *argv[])
     printf("Agora vamos cadastrar a populacao da cidade.\n");
     printf("Populacao: ");
     scanf("%d", &populacao);
-    limpar_buffer();
+
 
     // Areá em km².
     printf("Agora vamos cadastrar a area da cidade em km2.\n");
     printf("Área em km2: ");
     scanf("%f", &area_km2);
-    limpar_buffer();
+   
 
     // PIB.
     printf("Agora vamos cadastrar o PIB da cidade.\n");
     printf("PIB: ");
     scanf("%f", &pib);
-    limpar_buffer();
+    
 
     // Turísticos.
     printf("Agora vamos cadastrar o numero de pontos turisticos da cidade.\n");
     printf("Numero de pontos turisticos: ");
     scanf("%d", &turisticos);
-    limpar_buffer();
+    
 
     // Lê os dados da segunda carta
 
@@ -98,10 +90,10 @@ int main(int argc, char const *argv[])
     printf("Digite o codigo da carta de acordo com o numero do seu estado escolhido. EX: GO01.\n");
     printf("Digite o codigo da carta: ");
     scanf("%9s", codigo2);
-    limpar_buffer();
+    
 
     // Cidade.
-    printf("Agora vamos cadastrar a cidade de acordo com o estado que você escolheu.\n");
+    printf("Agora vamos cadastrar a cidade de acordo com o estado que voce escolheu.\n");
     printf("Nome da cidade (Ate 79 caracteres): ");
     fgets(cidade2, sizeof(cidade2), stdin);
     cidade2[strcspn(cidade2, "\n")] = 0;
@@ -110,25 +102,25 @@ int main(int argc, char const *argv[])
     printf("Agora vamos cadastrar a populacao da cidade.\n");
     printf("Populacao: ");
     scanf("%d", &populacao2);
-    limpar_buffer();
+    
 
     // Areá em km².
     printf("Agora vamos cadastrar a area da cidade em km2.\n");
     printf("Área em km2: ");
     scanf("%f", &area_km22);
-    limpar_buffer();
+    
 
     // PIB.
     printf("Agora vamos cadastrar o PIB da cidade.\n");
     printf("PIB: ");
     scanf("%f", &pib2);
-    limpar_buffer();
+    
 
     // Pontos turísticos.
     printf("Agora vamos cadastrar o numero de pontos turisticos da cidade.\n");
     printf("Numero de pontos turisticos: ");
     scanf("%d", &turisticos2);
-    limpar_buffer();
+    
 
     // Exibe os dados das cartas cadastradas
 
